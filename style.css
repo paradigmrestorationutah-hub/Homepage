@@ -1,6 +1,6 @@
 /* General & Typography */
 :root {
-    --primary-orange: #ff4500;
+    --primary-orange: #d16b00; /* Changed to a more vintage, muted orange */
     --gray-dark: #333;
     --gray-medium: #555;
     --black: #000;
@@ -49,7 +49,7 @@ body {
 }
 
 .btn-primary:hover {
-    background-color: #e63e00;
+    background-color: #a85600; /* Adjusted hover state for the new orange */
 }
 
 .btn-secondary {
