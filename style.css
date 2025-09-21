@@ -1,0 +1,328 @@
+/* General & Typography */
+:root {
+    --primary-orange: #ff4500;
+    --gray-dark: #333;
+    --gray-medium: #555;
+    --black: #000;
+    --white: #fff;
+    --bg-light-gray: #f8f8f8;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: var(--gray-dark);
+    background-color: var(--white);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Reusable Components */
+.btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--primary-orange);
+    color: var(--white);
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #e63e00;
+}
+
+.btn-secondary {
+    background-color: var(--gray-dark);
+    color: var(--white);
+    border: none;
+}
+
+.btn-secondary:hover {
+    background-color: var(--black);
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--gray-dark);
+    text-align: center;
+    margin-bottom: 3rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Header */
+.header {
+    background-color: var(--black);
+    color: var(--white);
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    color: var(--primary-orange);
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+}
+
+.nav-link {
+    color: var(--white);
+    text-decoration: none;
+    margin-left: 2rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--primary-orange);
+}
+
+/* Hero Section */
+.hero {
+    background: url('https://via.placeholder.com/1600x900.png?text=Utah+Ram+and+Wasatch+Mountains') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--white);
+    position: relative;
+    margin-top: -80px; /* Adjust for fixed header height */
+    padding-top: 80px;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Overlay for readability */
+}
+
+.hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero p {
+    font-size: 1.25rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+}
+
+/* Services Section */
+.services-section {
+    padding: 5rem 0;
+    background-color: var(--bg-light-gray);
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.service-card {
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+}
+
+.service-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.service-card h3 {
+    font-size: 1.5rem;
+    margin: 1.5rem 0 0.5rem;
+    color: var(--primary-orange);
+}
+
+.service-card p {
+    padding: 0 1.5rem 1.5rem;
+}
+
+/* Values Section */
+.values-section {
+    padding: 5rem 0;
+}
+
+.value-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 3rem;
+}
+
+.value-text, .value-image {
+    flex: 1;
+    min-width: 300px;
+}
+
+.value-text .section-title {
+    text-align: left;
+    margin-bottom: 1.5rem;
+}
+
+.value-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Features Section */
+.features-section {
+    background-color: var(--gray-dark);
+    color: var(--white);
+    padding: 5rem 0;
+}
+
+.features-section .section-title {
+    color: var(--white);
+}
+
+.features-grid {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.feature-card {
+    flex-basis: 300px;
+    padding: 2rem;
+    border: 1px solid var(--gray-medium);
+    border-radius: 8px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.feature-card:hover {
+    background-color: var(--gray-medium);
+    border-color: var(--primary-orange);
+}
+
+.icon {
+    font-size: 3rem;
+    color: var(--primary-orange);
+    margin-bottom: 1rem;
+}
+
+.feature-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--black);
+    color: var(--gray-medium);
+    padding: 3rem 0;
+    text-align: center;
+}
+
+.footer-links a {
+    color: var(--gray-medium);
+    text-decoration: none;
+    margin: 0 1rem;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--white);
+}
+
+.footer p {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+/* SEO & Accessibility Enhancements */
+/* I've added this to demonstrate best practices */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .header .container {
+        flex-direction: column;
+    }
+    .nav {
+        margin-top: 1rem;
+    }
+    .nav-link {
+        margin: 0 0.5rem;
+    }
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    .section-title {
+        font-size: 2rem;
+    }
+    .value-content {
+        flex-direction: column;
+    }
+    .value-text .section-title {
+        text-align: center;
+    }
+}
